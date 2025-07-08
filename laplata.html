@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>La Plata | Luismeng Photography</title>
+  <title>La Plata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -19,109 +19,159 @@
       margin: 0;
       font-family: 'Roboto', Arial, sans-serif;
     }
-    header {
+    .hero-header {
+      position: relative;
+      min-height: 54vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2.6rem 1rem 1.5rem 1rem;
-      background: linear-gradient(120deg, var(--dim) 0%, var(--bg) 100%);
-      border-bottom: 2px solid var(--highlight);
-    }
-    h1 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 2.3rem;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-    .intro {
-      font-size: 1.18rem;
-      max-width: 700px;
+      justify-content: center;
       text-align: center;
-      color: var(--fg);
-      margin-bottom: 1.8rem;
-      font-weight: 400;
-      opacity: 0.92;
+      background: url('./hero.jpg') center/cover no-repeat;
+      box-shadow: 0 4px 32px rgba(34,34,59,0.19);
     }
-    .section-title {
-      color: var(--accent);
+    .hero-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,rgba(34,34,59,0.65) 60%,rgba(34,34,59,0.82) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 3.3rem 1rem 2.2rem 1rem;
+    }
+    .hero-title {
       font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.45rem;
-      margin: 2.2rem 0 1.1rem 0;
-      text-align: center;
-      letter-spacing: 0.04em;
+      font-size: 2.7rem;
+      color: var(--accent);
+      margin: 0 0 1.1rem 0;
+      letter-spacing: 0.09em;
       font-weight: 700;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.2rem;
-      max-width: 1150px;
+    .hero-desc {
+      font-size: 1.35rem;
+      color: var(--fg);
+      font-weight: 400;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 0 1.5rem 2.5rem 1.5rem;
     }
-    .gallery img {
-      width: 100%;
-      height: 230px;
+    .gallery-block {
+      max-width: 1080px;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 0 1.2rem;
+    }
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      justify-content: center;
+    }
+    .gallery-row img {
+      display: block;
+      max-width: 100%;
+      height: 72vh;
       object-fit: cover;
-      border-radius: 0.8rem;
-      border: 2px solid var(--highlight);
-      box-shadow: 0 2px 12px rgba(34,34,59,0.13);
-      background: #333;
-      transition: transform 0.17s, box-shadow 0.17s;
+      border-radius: 1.1rem;
+      box-shadow: 0 4px 36px rgba(34,34,59,0.16);
+      flex: 1 1 320px;
+      min-width: 220px;
+      max-height: 72vh;
+      background: #e0e0e0;
+      transition: transform 0.18s, box-shadow 0.18s;
     }
-    .gallery img:hover {
-      transform: scale(1.035);
-      box-shadow: 0 8px 28px rgba(34,34,59,0.20);
-      border-color: var(--accent);
+    .gallery-row img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 44px rgba(224,122,95,0.18);
+    }
+    @media (max-width: 1000px) {
+      .gallery-row img {
+        max-height: 55vh;
+        min-width: 0;
+      }
+      .gallery-block {
+        padding: 0 0.5rem;
+      }
     }
     @media (max-width: 700px) {
-      .gallery img { height: 125px; }
-      .section-title { font-size: 1.1rem; }
-      h1 { font-size: 1.45rem; }
-      .intro { font-size: 1rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-desc { font-size: 1.01rem; }
+      .hero-content { padding: 2.1rem 0.2rem 1.3rem 0.2rem; }
+      .gallery-row {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .gallery-row img {
+        width: 100%;
+        max-height: 45vh;
+        border-radius: 0.7rem;
+      }
+    }
+    footer {
+      text-align: center;
+      color: var(--highlight);
+      font-size: 1rem;
+      background: var(--bg);
+      border-top: 1px solid var(--highlight);
+      padding: 2rem 0 1.5rem 0;
+      margin-top: 3rem;
+      letter-spacing: 0.03em;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>La Plata</h1>
-    <div class="intro">
-      A city designed like a chessboard—here’s how La Plata looks and feels from above and on the ground.
+  <div class="hero-header">
+    <div class="hero-content">
+      <div class="hero-title">La Plata</div>
+      <div class="hero-desc">
+        A city designed like a chessboard—here’s how La Plata looks and feels from above and on the ground.
+      </div>
     </div>
-  </header>
+  </div>
 
-  <div class="section-title">Grid City from Above</div>
-  <section class="gallery">
-    <img src="assets/images/laplata/MDB5749.jpg" alt="Aerial view of La Plata city grid">
-    <img src="assets/images/laplata/MDB5755.jpg" alt="La Plata cityscape from above">
-    <img src="assets/images/laplata/MDB5760.jpg" alt="Drone photo showing La Plata grid">
-    <img src="assets/images/laplata/MDB5789.jpg" alt="Aerial of stadium and city, La Plata">
-    <img src="assets/images/laplata/MDB5790.jpg" alt="Geometric street pattern of La Plata">
-    <img src="assets/images/laplata/MDB5797.jpg" alt="City grid and parks, La Plata">
-    <img src="assets/images/laplata/MDB5801.jpg" alt="Aerial details of La Plata city blocks">
-  </section>
+  <!-- 第一段 -->
+  <div class="gallery-block">
+    <div class="gallery-row">
+      <img src="Laplata01.jpg" alt="Aerial view of La Plata grid pattern">
+      <img src="Laplata02.jpg" alt="Chessboard-like blocks of La Plata from above">
+    </div>
+    <div class="gallery-row">
+      <img src="Laplata03.jpg" alt="Street vendor at Plaza Moreno">
+      <img src="Laplata04.jpg" alt="Aerial of central government building and cityscape">
+      <img src="Laplata05.jpg" alt="Cyclists near City Hall">
+    </div>
+  </div>
 
-  <div class="section-title">Streets & Landmarks</div>
-  <section class="gallery">
-    <img src="assets/images/laplata/MDB5808.jpg" alt="Plaza with food cart, La Plata">
-    <img src="assets/images/laplata/MDB5809.jpg" alt="People with sign at cathedral, La Plata">
-    <img src="assets/images/laplata/MDB5812.jpg" alt="Inside La Plata cathedral, columns and light">
-    <img src="assets/images/laplata/MDB5813.jpg" alt="Flag and light inside cathedral, La Plata">
-    <img src="assets/images/laplata/MDB5817.jpg" alt="Photographer in main square, La Plata">
-    <img src="assets/images/laplata/MDB5821.jpg" alt="Cyclists in Plaza Moreno, La Plata">
-    <img src="assets/images/laplata/MDB5827.jpg" alt="Street signs and white building, La Plata">
-    <img src="assets/images/laplata/MDB5831.jpg" alt="Equestrian statue and flag, La Plata">
-  </section>
+  <!-- 第二段 -->
+  <div class="gallery-block">
+    <div class="gallery-row">
+      <img src="Laplata06.jpg" alt="Aerial of stadium and urban sprawl">
+      <img src="Laplata07.jpg" alt="Equestrian statue under blue sky">
+    </div>
+    <div class="gallery-row">
+      <img src="Laplata08.jpg" alt="Street signs and classical white building">
+      <img src="Laplata09.jpg" alt="Museum hall with dinosaur skeleton">
+    </div>
+    <div class="gallery-row">
+      <img src="Laplata10.jpg" alt="Girl entering museum in sunlight">
+      <img src="Laplata11.jpg" alt="Museum of La Plata facade with red car">
+    </div>
+  </div>
 
-  <div class="section-title">Everyday Moments</div>
-  <section class="gallery">
-    <img src="assets/images/laplata/MDB53919.jpg" alt="Boy looking up at museum exhibit, La Plata">
-    <img src="assets/images/laplata/MDB5087.jpg" alt="Dinosaur skeleton in La Plata Museum">
-    <img src="assets/images/laplata/MDB5850.jpg" alt="Children entering museum, La Plata">
-    <img src="assets/images/laplata/MDB5853.jpg" alt="Red car and museum entrance, La Plata">
-    <img src="assets/images/laplata/MDB5856.jpg" alt="Life in the city, La Plata">
-    <img src="assets/images/laplata/MDB5842.jpg" alt="Everyday scene in La Plata">
-  </section>
+  <!-- 第三段 -->
+  <div class="gallery-block">
+    <div class="gallery-row">
+      <img src="Laplata12.jpg" alt="Inside La Plata Cathedral with blue ribbon">
+      <img src="Laplata13.jpg" alt="Cathedral columns and light">
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Luismeng Photography — La Plata Project
+  </footer>
 </body>
 </html>
