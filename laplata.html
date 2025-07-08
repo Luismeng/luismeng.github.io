@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>La Plata</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photo gallery of La Plata: a city designed like a chessboard, with aerial and street views.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -19,6 +20,14 @@
       margin: 0;
       font-family: 'Roboto', Arial, sans-serif;
     }
+    a, button, img:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    main {
+      display: block;
+      width: 100%;
+    }
     .hero-header {
       position: relative;
       min-height: 54vh;
@@ -27,7 +36,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: url('.assets/images/laplata/hero.jpg') center/cover no-repeat;
+      background: url('assets/images/laplata/hero.jpg') center/cover no-repeat;
       box-shadow: 0 4px 32px rgba(34,34,59,0.19);
     }
     .hero-header::after {
@@ -49,6 +58,7 @@
       margin: 0 0 1.1rem 0;
       letter-spacing: 0.09em;
       font-weight: 700;
+      text-shadow: 1px 2px 6px rgba(34,34,59,0.15);
     }
     .hero-desc {
       font-size: 1.35rem;
@@ -75,18 +85,19 @@
       display: block;
       max-width: 100%;
       height: 72vh;
-      object-fit: cover;
+      object-fit: contain; /* shows entire image, no crop */
       border-radius: 1.1rem;
       box-shadow: 0 4px 36px rgba(34,34,59,0.16);
       flex: 1 1 320px;
       min-width: 220px;
       max-height: 72vh;
-      background: #e0e0e0;
+      background: #22223b; /* matches page bg, adjust as desired */
       transition: transform 0.18s, box-shadow 0.18s;
     }
-    .gallery-row img:hover {
+    .gallery-row img:hover, .gallery-row img:focus {
       transform: scale(1.03);
       box-shadow: 0 8px 44px rgba(224,122,95,0.18);
+      outline: 2px solid var(--accent);
     }
     @media (max-width: 1000px) {
       .gallery-row img {
@@ -124,52 +135,50 @@
   </style>
 </head>
 <body>
-  <div class="hero-header">
+  <header class="hero-header">
     <div class="hero-content">
-      <div class="hero-title">La Plata</div>
-      <div class="hero-desc">
+      <h1 class="hero-title">La Plata</h1>
+      <p class="hero-desc">
         A city designed like a chessboard—here’s how La Plata looks and feels from above and on the ground.
+      </p>
+    </div>
+  </header>
+  <main>
+    <!-- 第一段 -->
+    <section class="gallery-block" aria-label="Aerial and street views">
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata01.jpg" alt="Aerial view of La Plata grid pattern" loading="lazy">
+        <img src="assets/images/laplata/Laplata02.jpg" alt="Chessboard-like blocks of La Plata from above" loading="lazy">
       </div>
-    </div>
-  </div>
-
-  <!-- 第一段 -->
-  <div class="gallery-block">
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata01.jpg" alt="Aerial view of La Plata grid pattern">
-      <img src="assets/images/laplata/Laplata02.jpg" alt="Chessboard-like blocks of La Plata from above">
-    </div>
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata03.jpg" alt="Street vendor at Plaza Moreno">
-      <img src="assets/images/laplata/Laplata04.jpg" alt="Aerial of central government building and cityscape">
-      <img src="assets/images/laplata/Laplata05.jpg" alt="Cyclists near City Hall">
-    </div>
-  </div>
-
-  <!-- 第二段 -->
-  <div class="gallery-block">
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata06.jpg" alt="Aerial of stadium and urban sprawl">
-      <img src="assets/images/laplata/Laplata07.jpg" alt="Equestrian statue under blue sky">
-    </div>
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata08.jpg" alt="Street signs and classical white building">
-      <img src="assets/images/laplata/Laplata09.jpg" alt="Museum hall with dinosaur skeleton">
-    </div>
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata10.jpg" alt="Girl entering museum in sunlight">
-      <img src="assets/images/laplata/Laplata11.jpg" alt="Museum of La Plata facade with red car">
-    </div>
-  </div>
-
-  <!-- 第三段 -->
-  <div class="gallery-block">
-    <div class="gallery-row">
-      <img src="assets/images/laplata/Laplata12.jpg" alt="Inside La Plata Cathedral with blue ribbon">
-      <img src="assets/images/laplata/Laplata13.jpg" alt="Cathedral columns and light">
-    </div>
-  </div>
-
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata03.jpg" alt="Street vendor at Plaza Moreno" loading="lazy">
+        <img src="assets/images/laplata/Laplata04.jpg" alt="Aerial of central government building and cityscape" loading="lazy">
+        <img src="assets/images/laplata/Laplata05.jpg" alt="Cyclists near City Hall" loading="lazy">
+      </div>
+    </section>
+    <!-- 第二段 -->
+    <section class="gallery-block" aria-label="City monuments and museums">
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata06.jpg" alt="Aerial of stadium and urban sprawl" loading="lazy">
+        <img src="assets/images/laplata/Laplata07.jpg" alt="Equestrian statue under blue sky" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata08.jpg" alt="Street signs and classical white building" loading="lazy">
+        <img src="assets/images/laplata/Laplata09.jpg" alt="Museum hall with dinosaur skeleton" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata10.jpg" alt="Girl entering museum in sunlight" loading="lazy">
+        <img src="assets/images/laplata/Laplata11.jpg" alt="Museum of La Plata facade with red car" loading="lazy">
+      </div>
+    </section>
+    <!-- 第三段 -->
+    <section class="gallery-block" aria-label="Cathedral interior and exterior">
+      <div class="gallery-row">
+        <img src="assets/images/laplata/Laplata12.jpg" alt="Inside La Plata Cathedral with blue ribbon" loading="lazy">
+        <img src="assets/images/laplata/Laplata13.jpg" alt="Cathedral columns and light" loading="lazy">
+      </div>
+    </section>
+  </main>
   <footer>
     &copy; 2025 Meng Dingbo Photography — La Plata Project
   </footer>
