@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Independence Day in Argentina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scenes from Argentina's Independence Day celebration, July 9, 2025.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #e07a5f;
+      --bg: #22223b;
+      --fg: #f2e9e4;
+      --dim: #4a4e69;
+      --highlight: #9a8c98;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    a, button, img:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    main {
+      display: block;
+      width: 100%;
+    }
+    .hero-header {
+      position: relative;
+      min-height: 54vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('assets/images/independence/hero.jpg') center/cover no-repeat;
+      box-shadow: 0 4px 32px rgba(34,34,59,0.19);
+    }
+    .hero-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,rgba(34,34,59,0.65) 60%,rgba(34,34,59,0.82) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 3.3rem 1rem 2.2rem 1rem;
+    }
+    .hero-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.7rem;
+      color: var(--accent);
+      margin: 0 0 1.1rem 0;
+      letter-spacing: 0.09em;
+      font-weight: 700;
+      text-shadow: 1px 2px 6px rgba(34,34,59,0.15);
+    }
+    .hero-desc {
+      font-size: 1.35rem;
+      color: var(--fg);
+      font-weight: 400;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .gallery-block {
+      max-width: 1080px;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 0 1.2rem;
+    }
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.3rem;
+      justify-content: center;
+    }
+    .gallery-row img {
+      display: block;
+      max-width: 100%;
+      height: 72vh;
+      object-fit: contain;
+      border-radius: 1.1rem;
+      box-shadow: 0 4px 36px rgba(34,34,59,0.16);
+      flex: 1 1 320px;
+      min-width: 220px;
+      max-height: 72vh;
+      background: #22223b;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .gallery-row img:hover, .gallery-row img:focus {
+      transform: scale(1.03);
+      box-shadow: 0 8px 44px rgba(224,122,95,0.18);
+      outline: 2px solid var(--accent);
+    }
+    @media (max-width: 1000px) {
+      .gallery-row img {
+        max-height: 55vh;
+        min-width: 0;
+      }
+      .gallery-block {
+        padding: 0 0.5rem;
+      }
+    }
+    @media (max-width: 700px) {
+      .hero-title { font-size: 2rem; }
+      .hero-desc { font-size: 1.01rem; }
+      .hero-content { padding: 2.1rem 0.2rem 1.3rem 0.2rem; }
+      .gallery-row {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .gallery-row img {
+        width: 100%;
+        max-height: 45vh;
+        border-radius: 0.7rem;
+      }
+    }
+    footer {
+      text-align: center;
+      color: var(--highlight);
+      font-size: 1rem;
+      background: var(--bg);
+      border-top: 1px solid var(--highlight);
+      padding: 2rem 0 1.5rem 0;
+      margin-top: 3rem;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <div class="hero-content">
+      <h1 class="hero-title">Independence Day in Argentina</h1>
+      <p class="hero-desc">July 9, 2025 — Buenos Aires</p>
+    </div>
+  </header>
+  <main>
+    <section class="gallery-block" aria-label="Independence Day gallery">
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind01.jpg" alt="Independence Day scene 1" loading="lazy">
+        <img src="assets/images/independence/ind02.jpg" alt="Independence Day scene 2" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind03.jpg" alt="Independence Day scene 3" loading="lazy">
+        <img src="assets/images/independence/ind04.jpg" alt="Independence Day scene 4" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind05.jpg" alt="Independence Day scene 5" loading="lazy">
+        <img src="assets/images/independence/ind06.jpg" alt="Independence Day scene 6" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind07.jpg" alt="Independence Day scene 7" loading="lazy">
+        <img src="assets/images/independence/ind08.jpg" alt="Independence Day scene 8" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind09.jpg" alt="Independence Day scene 9" loading="lazy">
+        <img src="assets/images/independence/ind10.jpg" alt="Independence Day scene 10" loading="lazy">
+      </div>
+      <div class="gallery-row">
+        <img src="assets/images/independence/ind11.jpg" alt="Independence Day scene 11" loading="lazy">
+        <img src="assets/images/independence/ind12.jpg" alt="Independence Day scene 12" loading="lazy">
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Meng Dingbo Photography — Independence Day
+  </footer>
+</body>
+</html>
